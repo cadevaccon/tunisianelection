@@ -2,10 +2,7 @@ package tn.isg.soa.tunisianelection.Models;
 
 import lombok.*;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.List;
 
@@ -18,6 +15,7 @@ import java.util.List;
 public class ListeCandidat {
     @EqualsAndHashCode.Include
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long idList;
     @NonNull
     private String gouvernorat;

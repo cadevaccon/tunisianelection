@@ -12,8 +12,10 @@ import java.time.LocalDate;
 @Inheritance(strategy= InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="personne_type")
 public class Personne {
+	
     @EqualsAndHashCode.Include
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NonNull
     private String nom;

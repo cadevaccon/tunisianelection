@@ -2,10 +2,7 @@ package tn.isg.soa.tunisianelection.Models;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
@@ -15,6 +12,8 @@ import javax.persistence.ManyToOne;
 public class Formation {
     @EqualsAndHashCode.Include
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private long id;
     @NonNull
     private String nom;
@@ -24,7 +23,7 @@ public class Formation {
     private String domaine;
     @ManyToOne
     @JoinColumn(name="candidat_id")
-    private Candidat candidat;
+    private Candidat candidat;  
 
     public Formation(@NonNull String nom, @NonNull int duree, @NonNull String domaine) {
         this.nom = nom;

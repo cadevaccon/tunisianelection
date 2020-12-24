@@ -10,6 +10,8 @@ import javax.persistence.*;
 public class Justificatif {
     @EqualsAndHashCode.Include
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private long id;
     private String type;
 

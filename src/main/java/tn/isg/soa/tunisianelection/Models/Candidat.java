@@ -48,12 +48,8 @@ public class Candidat extends Personne {
 
     public Candidat(byte photo, String tweeter, String facebook) {
         super();
-
         this.photo = photo;
         this.tweeter = tweeter;
         this.facebook = facebook;
-
-
-
     }
 }

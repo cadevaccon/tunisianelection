@@ -14,11 +14,12 @@ import java.util.List;
 @Entity //
 public class Parti {
     @Id
-    @NonNull
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private long id;
     @NonNull
     private String nom;
-    @NonNull
+    
     private LocalDate dateCreation;
     @NonNull
     private String local;
